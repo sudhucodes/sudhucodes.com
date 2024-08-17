@@ -360,6 +360,7 @@ nav .navbar .links li .sub-menu li{
   margin: 0 auto;
   border-radius: 8px;
   position: relative;
+  background-color: #fff;
 }
 
 .gallery-slider {
@@ -380,31 +381,12 @@ nav .navbar .links li .sub-menu li{
   display: block;
 }
 
-.gallery-dots {
-  text-align: center;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-.dot {
-  height: 12px;
-  width: 12px;
-  margin: 0 5px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  cursor: pointer;
-}
-
-.dot.active {
-  background-color: #3E8DA8;
-}
 
 
 .image-details {
   background-color: white;
   padding: 24px;
-  border-radius: 8px;
+  border-radius: 4px 4px 8px 8px;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 
@@ -429,3 +411,121 @@ nav .navbar .links li .sub-menu li{
 }
 
 
+
+
+
+
+section{
+  text-align: center;
+  font-size: 30px;
+}
+
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px auto;
+  max-width: 1200px;
+}
+
+.project {
+  display: flex;
+  flex-direction: row;
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  border-radius: 8px 0 0 8px;
+  flex: 1 1 calc(50% - 20px); /* 2x2 layout on larger screens */
+  max-width: calc(50% - 20px);
+  transition: transform 0.3s ease;
+  height: 150px; /* Increased height */
+}
+
+.project-img {
+  flex: 1;
+  min-width: 150px;
+}
+
+.project-img img {
+  width: 100%;
+  height: 100%; /* Ensures the image fills its container */
+  object-fit: cover; /* Ensures the image maintains its aspect ratio */
+  border-radius: 8px 0 0 8px;
+}
+
+.project-info {
+  flex: 2;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centers content vertically */
+  text-align: left;
+}
+
+.project-info h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.project-info p {
+  font-size: 1rem;
+  color: #888;
+}
+
+@media (max-width: 768px) {
+  .project {
+    flex-direction: column;
+    flex: 1 1 100%;
+    border-radius: 8px 8px 0 0;
+    max-width: 100%;
+    height: auto; /* Remove fixed height for mobile */
+  }
+
+  .project-img img {
+    height: auto;
+    border-radius: 8px 8px 0 0;
+  }
+
+  .project-info {
+    border-radius: 0 0 8px 8px;
+    text-align: center;
+  }
+}
+
+
+
+
+
+
+
+
+footer {
+  color: #d1d5db;
+  text-align: center;
+  padding: 15px;
+  margin-top: auto; /* Yeh ensure karega ki footer last me rahe */
+  background-color: #0d1224; /* Footer ka background set kare */
+  width: 100%; /* Footer ko full width dena */
+  font-size: 12px;
+  display: grid;
+  gap: 10px;
+  box-sizing: border-box;
+  border-top: 1px solid #4e4e4e;
+}
+
+footer p{
+  margin: 0;
+  padding: 0;
+  font-weight: 300;
+}
+
+.socialLinks a{
+  color: #d1d5db;
+  text-decoration: none;
+  padding: 7px;
+  font-weight: 300;
+}
+
+.socialLinks a:hover{
+  color: #26ffe3;
+}
