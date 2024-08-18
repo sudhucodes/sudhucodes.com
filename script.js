@@ -39,15 +39,15 @@ jsArrow.onclick = function() {
 }
 
 
+
+
+
+
+
 document.querySelectorAll('.toggle-description').forEach(button => {
-  button.addEventListener('click', () => {
-    const description = button.nextElementSibling;
-    if (description.style.display === 'block') {
-      description.style.display = 'none';
-      button.textContent = 'Show More';
-    } else {
-      description.style.display = 'block';
-      button.textContent = 'Show Less';
-    }
+  button.addEventListener('click', function() {
+    const projectId = this.getAttribute('data-id');
+    localStorage.setItem('projectId', projectId);
+    window.open('project-details.html', '_blank'); // Opens the page in a new tab
   });
 });
