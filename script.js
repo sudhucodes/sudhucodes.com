@@ -37,3 +37,17 @@ let jsArrow = document.querySelector(".js-arrow");
 jsArrow.onclick = function() {
  navLinks.classList.toggle("show3");
 }
+
+
+document.querySelectorAll('.toggle-description').forEach(button => {
+  button.addEventListener('click', () => {
+    const description = button.nextElementSibling;
+    if (description.style.display === 'block') {
+      description.style.display = 'none';
+      button.textContent = 'Show More';
+    } else {
+      description.style.display = 'block';
+      button.textContent = 'Show Less';
+    }
+  });
+});
