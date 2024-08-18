@@ -48,6 +48,6 @@ document.querySelectorAll('.toggle-description').forEach(button => {
   button.addEventListener('click', function() {
     const projectId = this.getAttribute('data-id');
     localStorage.setItem('projectId', projectId);
-    window.open('project-details.html', '_blank'); // Opens the page in a new tab
+    window.open('../pages/project-details.html', '_blank'); // Opens the page in a new tab
   });
 });

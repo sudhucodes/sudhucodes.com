@@ -1,0 +1,268 @@
+/* Googlefont Poppins CDN Link */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  /* margin: 0;
+  padding: 0; */
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  margin: 0;
+  min-height: 100vh;
+  background-color: var(--body-color);
+}
+
+
+:root{
+  --body-color: #e7f6ff;
+  --nav-color: #3498db;
+  --heading-color: #067ff8;
+  --projects-heading-color: #3700feb6;
+  --text-color: #34495e;
+  --text-color-light: #7f8c8d;
+}
+
+/* ---------------NAV BAR CSS CODES-------------- */
+
+nav{
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  height: 70px;
+  background: var(--nav-color);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  z-index: 99;
+}
+nav .navbar{
+  height: 100%;
+  max-width: 1250px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  /* background: red; */
+  padding: 0 50px;
+}
+.navbar .logo a{
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+.navbar .logo a img{
+  height: 35px;
+}
+.card {
+  margin-top: 20px;
+    padding: 1rem;
+    overflow: hidden;
+    border: 1px solid #c5c5c5;
+    border-radius: 12px;
+    background-color: #d9d9d92f;
+    backdrop-filter: blur(8px);
+    min-width: 344px;
+    max-width: 644px;
+  }
+  
+  .wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    position: relative;
+    z-index: 10;
+    border: 0.5px solid #525252;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .terminal {
+    display: flex;
+    flex-direction: column;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+      "Liberation Mono", "Courier New", monospace;
+  }
+  
+  .head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+    min-height: 40px;
+    padding-inline: 12px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    background-color: #202425;
+  }
+  
+  .title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    height: 1.5rem;
+    user-select: none;
+    font-weight: 600;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #8e8e8e;
+  }
+  
+  .title > svg {
+    height: 18px;
+    width: 18px;
+    margin-top: 2px;
+    color: #006adc;
+  }
+  
+  .copy_toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.25rem;
+    border: 0.65px solid #c1c2c5;
+    margin-left: auto;
+    border-radius: 6px;
+    background-color: #202425;
+    color: #8e8e8e;
+    cursor: pointer;
+  }
+  
+  .copy_toggle > svg {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .body {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    overflow-x: auto;
+    overflow-y: auto; /* Enable vertical scrolling */
+    line-height: 19px;
+    color: white;
+    background-color: black;
+    white-space: nowrap;
+    max-height: 300px; /* Set a fixed height */
+    scroll-behavior: smooth; /* Smooth scrolling */
+  }
+  
+  /* Remove the gap between pre and HTML code */
+  .pre {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: transparent;
+    font-size: 16px;
+    margin-left: -30px; /* Remove margin */
+    padding: 0; /* Remove padding */
+  }
+  
+  .copy_toggle.checked > svg > path {
+    animation: clipboard-check 0.2s linear forwards;
+}
+
+@keyframes clipboard-check {
+    100% {
+        stroke: #fff;
+        d: path(
+            "M 9 5 H 7 a 2 2 0 0 0 -2 2 v 12 a 2 2 0 0 0 2 2 h 10 a 2 2 0 0 0 2 -2 V 7 a 2 2 0 0 0 -2 -2 h -2 M 9 5 a 2 2 0 0 0 2 2 h 2 a 2 2 0 0 0 2 -2 M 9 5 a 2 2 0 0 1 2 -2 h 2 a 2 2 0 0 1 2 2 m -6 9 l 2 2 l 4 -4"
+        );
+    }
+}
+
+section{
+  margin: 10px;
+}
+
+section h2{
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--projects-heading-color);
+}
+
+.project-image{
+  display: grid;
+}
+
+/* Project Image Styling */
+.project-image img {
+  width: 100%;
+  max-height: 250px; /* Adjust height as needed */
+  object-fit: cover; /* Ensure the image covers the container proportionally */
+  border-radius: 8px 8px 0 0; /* Adds rounded corners to the image */
+  overflow: hidden;
+}
+
+/* Date and Comment Styling */
+.date-comment {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px; /* Adds some padding for better spacing */
+  font-size: 0.9rem;
+}
+
+.date-comment p {
+  margin: 0;
+  padding: 5px 0;
+  color: #333; /* Darker color for better contrast */
+}
+
+ul{
+  margin: 0;
+  padding: 15px;
+}
+
+li{
+  color: var(--projects-heading-color);
+}
+
+/* Description Text Styling */
+.description-text {
+  padding: 10px;
+  background-color: #ffffff; /* White background for text area */
+  border-radius: 0 0 8px 8px; /* Rounded bottom corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Light shadow for a subtle effect */
+}
+
+.description-text p {
+  margin: 0 0 10px 0; /* Adds spacing between paragraphs */
+  color: #555; /* Medium-dark color for the text */
+  line-height: 1.6; /* Improves readability */
+  font-size: 0.95rem; /* Adjust font size for better visibility */
+}
+
+.highlight-red {
+  color: #ff6347; /* Tomato Red */
+  font-weight: 500;
+}
+
+.highlight-blue {
+  color: #4682b4; /* Steel Blue */
+  font-weight: 500;
+}
+
+.highlight-green {
+  color: #32cd32; /* Lime Green */
+  font-weight: 500;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .project-image img {
+    max-height: 200px; /* Adjust height for smaller screens */
+  }
+
+  .description-text p {
+    font-size: 0.9rem; /* Slightly smaller text on mobile */
+  }
+}
